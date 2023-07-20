@@ -1,5 +1,9 @@
 let printInReverse = true;
 
+function showAllContactDetails() {
+  $(".showContactContainerBtn").click();
+}
+
 function parseApplicantList(count = 1000) {
   output = ``;
   tuples = $("div.tuple");
@@ -94,6 +98,10 @@ function printApplicantList() {
     (window.scrollY * steps) /
     (document.body.scrollHeight - window.innerHeight);
   if (currentStep > steps - 1) {
+    let pathname = window.location.pathname;
+    if (pathname.endsWith("/rmjapplies") || pathname.endsWith("/applies")) {
+      showAllContactDetails();
+    }
     output = parseApplicantList();
     console.log(output);
   } else {
