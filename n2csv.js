@@ -83,7 +83,7 @@ function parseApplicantTuple(container) {
     if (title == "Pref. Locations") prefloc = info;
   }
 
-  line = `${fname}\t${phone}\t${email}\t${experience}\t${curloc}\t${availability}\t${salary}\t${current}\t${prefloc}\t${education}\t${skills}\n`;
+  line = `${fname}\t${email}\t${phone}\t${experience}\t${curloc}\t${availability}\t${salary}\t${current}\t${prefloc}\t${education}\t${skills}\n`;
   return line;
 }
 
