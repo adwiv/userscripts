@@ -87,6 +87,7 @@ function parseApplicantTuple(container) {
     if (title == "Pref. Locations") prefloc = info;
   }
 
+  if(phone.length == 12 && phone.startsWith("91")) phone = phone.substr(2);
   line = `${fname}\t${email}\t${phone}\t${experience}\t${curloc}\t${availability}\t${salary}\t${current}\t${prefloc}\t${education}\t${skills}\n`;
   return line;
 }
