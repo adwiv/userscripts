@@ -5,7 +5,7 @@ function printApplicantList() {
   for (i = appIds.length - 1; i >= 0; i--) {
     appId = appIds[i];
     container = $("#individual_application_" + appId);
-    rating = fname = phone = degree = institute = userloc = skills = passing = "";
+    rating = fname = email = phone = degree = institute = userloc = skills = passing = "";
 
     rating = container.find(".rating_text")[0].innerText
 
