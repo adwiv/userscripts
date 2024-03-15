@@ -7,7 +7,8 @@ function printApplicantList() {
     container = $("#individual_application_" + appId);
     rating = fname = email = phone = degree = institute = userloc = skills = passing = "";
 
-    rating = container.find(".rating_text")[0].innerText
+    if(container.find(".rating_text"))
+      rating = container.find(".rating_text")[0].innerText
 
     fname = container.find(".applicant_name")[0].innerText;
     fname = fname.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
