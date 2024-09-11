@@ -22,7 +22,8 @@ function parseApplicantList(count = 1000) {
 }
 
 function parseApplicantTuple(container) {
-  fname = $(".candidate-name", container)[0].innerText;
+  // fname = $(".candidate-name", container)[0].innerText;
+  fname = $(".candidate-name", container).innerText;
   fname = fname.replace(/\w\S*/g, function (txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
