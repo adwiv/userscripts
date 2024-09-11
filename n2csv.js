@@ -22,8 +22,10 @@ function parseApplicantList(count = 1000) {
 }
 
 function parseApplicantTuple(container) {
-  // fname = $(".candidate-name", container)[0].innerText;
-  fname = $(".candidate-name", container).innerText;
+  fname = email = phone = experience = curloc = availability = salary = current = prefloc = education = skills = 'MISSING';
+  
+  try {
+  fname = $(".candidate-name", container)[0].innerText;
   fname = fname.replace(/\w\S*/g, function (txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
@@ -89,6 +91,8 @@ function parseApplicantTuple(container) {
   }
 
   if(phone.length == 12 && phone.startsWith("91")) phone = phone.substr(2);
+  } catch(e) {
+  }
   line = `${fname}\t${email}\t${phone}\t${experience}\t${curloc}\t${availability}\t${salary}\t${current}\t${prefloc}\t${education}\t${skills}\n`;
   return line;
 }
