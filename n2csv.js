@@ -1,4 +1,4 @@
-let printInReverse = true;
+let printInReverse = false;
 
 function showAllContactDetails() {
   $(".showContactContainerBtn").click();
